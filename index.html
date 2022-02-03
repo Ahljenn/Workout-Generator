@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workout Generator</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="src/index.js"></script>
+</head>
+<!-- 
+Add about nav bar and workout images -->
+
+
+<body class="body">
+
+<p> 
+    
+    <div id="workouts" class="mainDiv"></div>
+    <hr/>
+    
+    <div>
+        <button onclick="showWorkout(generate(chest));">CHEST</button>
+        <button onclick="showWorkout(generate(legs));">LEGS</button>
+        <button onclick="showWorkout(generate(back));">BACK</button>
+        <button onclick="showWorkout(generate(abs));">ABS</button>
+    </div>
+
+    <hr/>
+    <div class="middle">
+        Generate a workout
+        <br>
+        <img src="https://i.pinimg.com/originals/5d/1b/62/5d1b6261ab2fcda7a9b01efab0df1e17.png">
+    </div>
+
+</p>
+</body>
+</html>
