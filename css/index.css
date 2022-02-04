@@ -33,7 +33,7 @@ hr{
     text-align: center;
     font: 200% system-ui;
     color: #566AE5;
-    -webkit-text-stroke: 0.5px black;
+    -webkit-text-stroke: 0.8px black;
 }
 
 img {
@@ -46,7 +46,6 @@ img {
 div{
     text-align: center;
     overflow: hidden;
-  
 }
 
 .mainDiv{
