@@ -20,6 +20,10 @@ button{
     color: #FFFFFF;
 }
 
+.reset{
+    color: #FFFFFF;
+}
+
 hr{
     /* Line divider */
     border: 2px solid #566AE5;
@@ -42,6 +46,7 @@ img {
 div{
     text-align: center;
     overflow: hidden;
+  
 }
 
 .mainDiv{

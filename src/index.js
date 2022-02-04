@@ -64,7 +64,7 @@ const back = {
   "Cable curls" : 1
 };
 
-//Ab work out logic is different, do it by seconds instead
+//Ab work out logic is different
 const abs = {
   "Track holds" : 4,
   "Flutter kicks" : 4,
@@ -82,6 +82,13 @@ const abs = {
 };
 
 const options = [chest, legs, back, abs];
+
+function reset(){
+  /**
+   * Reset inner html in main
+   */
+  document.getElementById("workouts").innerHTML = '';
+}
 
 function showWorkout(workout){
   /**
