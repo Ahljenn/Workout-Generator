@@ -59,8 +59,10 @@ div{
     border-radius: 5px;
 }
 
-@media (max-width: 300px){
+
+
+@media (max-width: 370px){
     button{
-        margin: 10px;
+        margin: 12px;
     }
 }

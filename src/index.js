@@ -124,6 +124,7 @@ function generate(day){
    * Generate workout and returns a mathematical set with no duplicates
    * Range of workouts 5 - 8
    */
+
   const minWorkouts = 5;
   const maxWorkotus = 8;
   const numberWorkouts = randomRange(minWorkouts, maxWorkotus);
@@ -146,7 +147,7 @@ function generate(day){
         workouts.set(gw, "Burnout");
         break;
       case 4: //Logic for abs
-        workouts.set(gw, "45 - 60 seconds" + " x " + randomRange(2,3) + " sets");
+        workouts.set(gw, "45 - 60 seconds");
         break;
     }
   }
