@@ -6,22 +6,47 @@
     <script type="text/javascript" src="src/index.js"></script>
 </head>
 <!-- note:
-Add about nav bar and workout images -->
+Add about nav bar and workout images 
+Add I/O for expected workout time
+One rep max calculator
+
+
+
+Use object destructuring for index.js
+https://www.youtube.com/watch?v=NIq3qLaHCIs
+
+Use React 
+- Buttons to clear all
+- Button to reset all
+-->
 <!-- add -> commit -> push -->
 
 
-<body class="body">
+<body class="body" onload="loadPage();">
 
 <p> 
     
     <div id="workouts" class="mainDiv"></div>
     <hr/>
-    <div>
+
+    <div id="Options">
+        <button onClick="selectPPL();">PUSH-PULL-LEGS</button>
+        <button onClick="selectBro();">BRO SPLITS</button>
+    </div>
+
+    <div id="Push-Pull-Legs">
+        <!-- Change these later -->
+        <button onclick="showWorkout(generate(chest));">PUSH</button>
+        <button onclick="showWorkout(generate(back));">PULL</button>
+        <button onclick="showWorkout(generate(legs));">LEGS</button>
+        <button style="background-color: rgb(48, 48, 48);" onClick="reset();">RESET</button>
+    </div>
+
+    <div id="Bro Splits">
         <button onclick="showWorkout(generate(chest));">CHEST</button>
         <button onclick="showWorkout(generate(legs));">LEGS</button>
         <button onclick="showWorkout(generate(back));">BACK</button>
         <button onclick="showWorkout(generate(abs));">ABS</button>
-
         <button style="background-color: rgb(48, 48, 48);" onClick="reset();">RESET</button>
     </div>
 

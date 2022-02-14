@@ -83,10 +83,15 @@ const abs = {
 
 const options = [chest, legs, back, abs];
 
+
+
 function reset(){
   /**
    * Reset inner html in main
    */
+  loadPage();
+  var options = document.getElementById("Options");
+  options.style.display = "block";
   document.getElementById("workouts").innerHTML = '';
 }
 
@@ -111,13 +116,7 @@ function getRandomWorkout(day){
   return workoutKey;
 }
 
-function randomRange(a, b){
-  /**
-   * Generate and return a number in specified range 
-   */
-  return Math.floor(Math.random() * (b - a + 1)) + a;
-}
-
+let randomRange = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
 
 function generate(day){
   /**
@@ -155,3 +154,24 @@ function generate(day){
 }
 
 showWorkout(generate(chest));
+
+function loadPage(){
+  split1 = document.getElementById("Push-Pull-Legs");
+  split2 = document.getElementById("Bro Splits");
+  split1.style.display = "none";
+  split2.style.display = "none";
+}
+
+function selectPPL(){
+  var options = document.getElementById("Options");
+  var workouts = document.getElementById("Push-Pull-Legs");
+  options.style.display = "none";
+  workouts.style.display = "block";
+}
+
+function selectBro(){
+  var options = document.getElementById("Options");
+  var workouts = document.getElementById("Bro Splits");
+  options.style.display = "none";
+  workouts.style.display = "block";
+}
