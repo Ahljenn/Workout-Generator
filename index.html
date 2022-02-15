@@ -27,7 +27,7 @@ Use React
 <p> 
     
     <div id="workouts" class="mainDiv"></div>
-    <hr/>
+    <hr>
 
     <div id="Options">
         <button onClick="selectPPL();">PUSH-PULL-LEGS</button>
@@ -46,15 +46,28 @@ Use React
         <button onclick="showWorkout(generate(chest));">CHEST</button>
         <button onclick="showWorkout(generate(legs));">LEGS</button>
         <button onclick="showWorkout(generate(back));">BACK</button>
+        <button onclick="showWorkout(generate(shoulder));">SHOULDER</button>
         <button onclick="showWorkout(generate(abs));">ABS</button>
         <button style="background-color: rgb(48, 48, 48);" onClick="reset();">RESET</button>
     </div>
 
-    <hr/>
+    <hr>
     <div class="middle">
         Generate a workout
         <br>
         <img src="https://i.pinimg.com/originals/5d/1b/62/5d1b6261ab2fcda7a9b01efab0df1e17.png">
+    </div>
+
+    <hr>
+    
+    <div class="middle2">
+        <b style="color:brown;">5/3/1</b> One rep max calculator
+        <br>
+        <input id="Weight" type="number" placeholder="Weight (lbs)" style="width: 100px;" min="1">
+        <input id="Reps" type="number" placeholder="Reps" style="width: 50px;" min="1">
+        <button class="calculate" onclick="oneRepMax();">Calculate</button>
+        <p id="Estimate">
+        </p>
     </div>
 
 </p>

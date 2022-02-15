@@ -16,7 +16,7 @@ button{
     background: #566AE5;
     font-weight: 700;
     border: 0;
-    border-radius: 0;
+    border-radius: 8px;
     color: #FFFFFF;
 }
 
@@ -31,11 +31,18 @@ hr{
 
 .middle{
     text-align: center;
-    font: 200% system-ui;
+    font-family: 'Lucida Sans';
+    font-style: oblique;
+    font-size: xx-large;
     color: #566AE5;
-    -webkit-text-stroke: 0.8px black;
 }
 
+.middle2{
+    text-align: center;
+    font-family: 'Lucida Sans';
+    font-size: large;
+    color: #000000;
+}
 img {
     /* Prevents image from stretching upon window resize */
     width: 50%;
@@ -59,6 +66,21 @@ div{
     border-radius: 5px;
 }
 
+.calculate {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 6px;
+    line-height: 20px;
+    height: 20px;
+    max-height: 30px;
+    background: #566AE5;
+    font-weight: 700;
+    border: 0;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
 
 
 @media (max-width: 370px){

@@ -64,6 +64,20 @@ const back = {
   "Cable curls" : 1
 };
 
+const shoulder = {
+  "Barbell overhead press" : 0, 
+  "Dumbell overhead press" : 0, 
+  "Arnold press" : 0,
+  "Standing cable press" : 1, 
+  "TYI" : 1, 
+  "Barbell facepull" : 1, 
+  "Cable facepull" : 1, 
+  "Barbell lateral raise" : 1, 
+  "Cable lateral raise" : 1, 
+  "Dumbbell bent-over lateral raise" : 1
+};
+
+
 //Ab work out logic is different
 const abs = {
   "Track holds" : 4,
@@ -81,8 +95,7 @@ const abs = {
   "Planks" : 4
 };
 
-const options = [chest, legs, back, abs];
-
+const options = [chest, legs, back, abs, shoulder];
 
 
 function reset(){
@@ -99,7 +112,7 @@ function showWorkout(workout){
   /**
    * Display workout
    */
-  document.getElementById("workouts").innerHTML = "<hr/>"; //Needed to reset the field after reclicking
+  document.getElementById("workouts").innerHTML = "<hr>"; //Needed to reset the field after reclicking
   for(let wk of workout){
     document.getElementById("workouts").innerHTML += (wk[0] + " - " + '<i>' + wk[1] + '</i>' + '<br><br>');
   }
@@ -153,7 +166,22 @@ function generate(day){
   return workouts;
 }
 
-showWorkout(generate(chest));
+
+function oneRepMax(){
+  document.getElementById("Estimate").innerHTML = "";
+  var wgt = parseInt(document.getElementById("Weight").value, 10);
+  var reps = parseInt(document.getElementById("Reps").value, 10);
+  var orm = Math.round((wgt * reps * 0.0333) + wgt);
+  //1 RM = Weight x Reps x 0.0333 + Weight
+  //https://www.reddit.com/r/531Discussion/comments/ad7juk/simple_way_to_evaluate_tm_based_off_5_31_and_tm/
+  
+  // document.getElementById("Estimate").innerHTML += "<table>";
+  // document.getElementById("Estimate").innerHTML += "<tr><td>Weight</td><td>Repetitions</td><td>Percent of max</td></tr>";
+  // // for(let i = 1; i <= 30; ++i){
+  document.getElementById("Estimate").innerHTML += '100% of 1RM: 1 rep - <b>225 lbs</b>';
+  // // }
+  // document.getElementById("Estimate").innerHTML += "</table>";
+}
 
 function loadPage(){
   split1 = document.getElementById("Push-Pull-Legs");
