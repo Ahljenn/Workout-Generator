@@ -5,16 +5,18 @@
     <link rel="stylesheet" href="css/index.css"/>
     <script type="text/javascript" src="src/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 </head>
 <!-- note:
 Add about nav bar and workout images 
 Add I/O for expected workout time
 One rep max calculator
 
-
-
 Use object destructuring for index.js
 https://www.youtube.com/watch?v=NIq3qLaHCIs
+
+
+Add press enter to submit
 
 Use React 
 - Buttons to clear all
@@ -23,12 +25,20 @@ Use React
 <!-- add -> commit -> push -->
 
 
+
+
 <body class="body" onload="loadPage();">
 
 <p> 
     
+    <div class="example1">
+        <h3 class="example2">
+            Generate a workout
+        </h3>
+    </div>
+
     <div id="workouts" class="mainDiv"></div>
-    <hr>
+    <hr> 
 
     <div id="Options">
         <button onClick="selectPPL();">PUSH-PULL-LEGS</button>
@@ -54,17 +64,27 @@ Use React
         <button style="background-color: rgb(48, 48, 48);" onClick="reset();">RESET</button>
     </div>
 
-    <hr>
-    <div class="middle">
-        Generate a workout
-        <br>
+    <div>
         <img src="https://i.pinimg.com/originals/5d/1b/62/5d1b6261ab2fcda7a9b01efab0df1e17.png">
+        <!-- <img src="https://cdn4.iconfinder.com/data/icons/fitness-vol-2-glyph/512/Back_strong_muscle_exercise_body_parts_medical_sports_man_fitness_natomy-512.png">
+        <img src="https://cdn4.iconfinder.com/data/icons/fitness-vol-2-glyph/512/body_chest_strong_muscle_exercise_parts_medical_sports_man_fitness_anatomy-512.png">
+        <img src="https://cdn1.iconfinder.com/data/icons/running-8/64/leg_muscle-leg-muscle-strong-512.png"> -->
+    </div>
+   
+
+    <div class="middle">
+        
+ 
+     
+      
+
     </div>
 
     <hr>
     
     <div class="middle2">
         <b style="color:brown;">5/3/1</b> 
+        <br>
         <h>One rep max calculator</h>
         <br>
         

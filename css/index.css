@@ -1,6 +1,7 @@
 .body {
     color: #000000;
     font: 100% system-ui;
+    background-color: rgb(248, 248, 248)
 } 
 
 button{
@@ -27,8 +28,6 @@ hr{
     /* Line divider */
     background-color: #566AE5;
     border: transparent;
-    margin-left: -8px;
-    margin-right: -8px;
     height: 10px;
 }
 
@@ -85,11 +84,14 @@ div{
     color: #FFFFFF;
 }
 
+
+
 h{
     font-style: bold;
     color: rgb(94, 94, 94);
     font-family: 'Trebuchet MS';
 }
+
 
 input[type=number]{
     border: 2.0px solid brown;
@@ -101,3 +103,49 @@ input[type=number]{
         margin: 12px;
     }
 }
+
+
+
+.example1 {
+    height: 100px;	
+    position: relative;
+    overflow: hidden;
+   }
+   .example1 h3 {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    line-height: 50px;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: example1 10s linear infinite;
+    -webkit-animation: example1 150s linear infinite;
+    animation: example1 10s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes example1 {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes example1 {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes example1 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }
