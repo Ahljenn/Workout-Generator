@@ -182,7 +182,7 @@ function oneRepMax(){
   
   for (let i = 0; i < 10; ++i){
     repMax = (orm * (100 - 3*i)) / 100;
-    document.getElementById("Estimate").innerHTML += (100 - 3*i) + "% of 1RM: " + (i + 1) + "rep(s): <br> <b>" + repMax + "lbs </b> <br><br>";
+    document.getElementById("Estimate").innerHTML += (100 - 3*i) + "% of 1RM: " + (i + 1) + " rep(s): <br> <b>" + repMax + " lbs </b> <br><br>";
     // document.getElementById("Estimate").innerHTML += "100% of 1RM: 1 rep - <b>" + orm + "lbs </b>";
   }
   return false;
