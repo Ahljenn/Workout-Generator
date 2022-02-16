@@ -133,7 +133,7 @@ let randomRange = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
 
 function generate(day){
   /**
-   * Generate workout and returns a mathematical set with no duplicates
+   * Generate workout and returns a map of workouts
    * Range of workouts 5 - 8
    */
 
