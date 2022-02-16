@@ -169,18 +169,20 @@ function generate(day){
 
 function oneRepMax(){
   document.getElementById("Estimate").innerHTML = "";
+
   var wgt = parseInt(document.getElementById("Weight").value, 10);
   var reps = parseInt(document.getElementById("Reps").value, 10);
   var orm = Math.round((wgt * reps * 0.0333) + wgt);
+  console.log(wgt, reps);
   //1 RM = Weight x Reps x 0.0333 + Weight
   //https://www.reddit.com/r/531Discussion/comments/ad7juk/simple_way_to_evaluate_tm_based_off_5_31_and_tm/
   
-  // document.getElementById("Estimate").innerHTML += "<table>";
-  // document.getElementById("Estimate").innerHTML += "<tr><td>Weight</td><td>Repetitions</td><td>Percent of max</td></tr>";
-  // // for(let i = 1; i <= 30; ++i){
-  document.getElementById("Estimate").innerHTML += '100% of 1RM: 1 rep - <b>225 lbs</b>';
-  // // }
-  // document.getElementById("Estimate").innerHTML += "</table>";
+  for (let i = 0; i < 10; ++i){
+    repMax = (orm * (100 - 3*i)) / 100;
+    document.getElementById("Estimate").innerHTML += (100 - 3*i) + "% of 1RM:" + (i + 1) + "rep(s): <br> <b>" + repMax + "lbs </b> <br><br>";
+    // document.getElementById("Estimate").innerHTML += "100% of 1RM: 1 rep - <b>" + orm + "lbs </b>";
+  }
+  return false;
 }
 
 function loadPage(){
