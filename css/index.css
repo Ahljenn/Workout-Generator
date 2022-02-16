@@ -26,7 +26,11 @@ button{
 
 hr{
     /* Line divider */
-    border: 2px solid #566AE5;
+    background-color: #566AE5;
+    border: transparent;
+    margin-left: -8px;
+    margin-right: -8px;
+    height: 10px;
 }
 
 .middle{
