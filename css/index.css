@@ -92,6 +92,11 @@ h{
     font-family: 'Trebuchet MS';
 }
 
+input[type=number]{
+    border: 2.0px solid brown;
+    border-radius: 4px;
+}
+
 @media (max-width: 370px){
     button{
         margin: 12px;
