@@ -97,17 +97,6 @@ const abs = {
 
 const options = [chest, legs, back, abs, shoulder];
 
-
-function reset(){
-  /**
-   * Reset inner html in main
-   */
-  loadPage();
-  var options = document.getElementById("Options");
-  options.style.display = "block";
-  document.getElementById("workouts").innerHTML = '';
-}
-
 function showWorkout(workout){
   /**
    * Display workout
@@ -188,6 +177,18 @@ function oneRepMax(){
   return false;
 }
 
+// Other functionalities for the webpage (Separate from the calculation/generator)
+
+function reset(){
+  /**
+   * Reset inner html in main
+   */
+  loadPage();
+  var options = document.getElementById("Options");
+  options.style.display = "block";
+  document.getElementById("workouts").innerHTML = '';
+}
+
 function loadPage(){
   split1 = document.getElementById("Push-Pull-Legs");
   split2 = document.getElementById("Bro Splits");
@@ -207,4 +208,10 @@ function selectBro(){
   var workouts = document.getElementById("Bro Splits");
   options.style.display = "none";
   workouts.style.display = "block";
+}
+
+function resetField(){
+  document.getElementById("Estimate").innerHTML = '';
+  document.getElementById("Weight").value = '';
+  document.getElementById("Reps").value = '';
 }

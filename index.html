@@ -31,11 +31,10 @@ Use React
 
 <p> 
     
-    <div class="example1">
-        <h3 class="example2">
-            Generate a workout
-        </h3>
+    <div class="titleDiv">
+        Generate a workout
     </div>
+    
 
     <div id="workouts" class="mainDiv"></div>
     <hr> 
@@ -66,18 +65,10 @@ Use React
 
     <div>
         <img src="https://i.pinimg.com/originals/5d/1b/62/5d1b6261ab2fcda7a9b01efab0df1e17.png">
-        <!-- <img src="https://cdn4.iconfinder.com/data/icons/fitness-vol-2-glyph/512/Back_strong_muscle_exercise_body_parts_medical_sports_man_fitness_natomy-512.png">
-        <img src="https://cdn4.iconfinder.com/data/icons/fitness-vol-2-glyph/512/body_chest_strong_muscle_exercise_parts_medical_sports_man_fitness_anatomy-512.png">
-        <img src="https://cdn1.iconfinder.com/data/icons/running-8/64/leg_muscle-leg-muscle-strong-512.png"> -->
     </div>
    
 
     <div class="middle">
-        
- 
-     
-      
-
     </div>
 
     <hr>
@@ -91,7 +82,7 @@ Use React
         <input id="Weight" type="number" placeholder="Weight (lbs)" style="width: 100px;" min="1">
         <input id="Reps" type="number" placeholder="Reps" style="width: 50px;" min="1">
         <button class="calculate" onclick="oneRepMax();">Calculate</button>
-        
+        <button style="background-color: rgb(48, 48, 48); height:20px" onclick="resetField(Estimate);">Reset</button>
         <p id="Estimate"></p>
 
     </div>

@@ -18,6 +18,7 @@ button{
     border: 0;
     border-radius: 8px;
     color: #FFFFFF;
+    margin: 3px;
 }
 
 .reset{
@@ -52,12 +53,18 @@ img {
     object-fit: contain;
 }
 
-div{
+div {
     text-align: center;
     overflow: hidden;
 }
 
-.mainDiv{
+.titleDiv { 
+    font-size: 30px;
+    font-family: 'Trebuchet MS';
+    color:#000000;
+}
+
+.mainDiv {
     /* Main div for upper portion of site */
     background-size: cover;
     background-repeat: no-repeat;
@@ -85,7 +92,6 @@ div{
 }
 
 
-
 h{
     font-style: bold;
     color: rgb(94, 94, 94);
@@ -105,47 +111,3 @@ input[type=number]{
 }
 
 
-
-.example1 {
-    height: 100px;	
-    position: relative;
-    overflow: hidden;
-   }
-   .example1 h3 {
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    line-height: 50px;
-    /* Starting position */
-    -moz-transform:translateX(100%);
-    -webkit-transform:translateX(100%);	
-    transform:translateX(100%);
-    /* Apply animation to this element */	
-    -moz-animation: example1 10s linear infinite;
-    -webkit-animation: example1 150s linear infinite;
-    animation: example1 10s linear infinite;
-   }
-   /* Move it (define the animation) */
-   @-moz-keyframes example1 {
-    0%   { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(-100%); }
-   }
-   @-webkit-keyframes example1 {
-    0%   { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(-100%); }
-   }
-   @keyframes example1 {
-    0%   { 
-    -moz-transform: translateX(100%); /* Firefox bug fix */
-    -webkit-transform: translateX(100%); /* Firefox bug fix */
-    transform: translateX(100%); 		
-    }
-    100% { 
-    -moz-transform: translateX(-100%); /* Firefox bug fix */
-    -webkit-transform: translateX(-100%); /* Firefox bug fix */
-    transform: translateX(-100%); 
-    }
-   }
