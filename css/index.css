@@ -4,10 +4,9 @@
     color: #000000;
     font: 100% system-ui;
     background-color: rgb(0, 0, 0);
-    background-image: url("/images/site-background.jpg");
+    background-image: url("https://wallpapercave.com/wp/wp5034271.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin 0 auto;
     height: 610px;
     background-position: center;
 } 
