@@ -168,7 +168,7 @@ function generate(day){
 
 function oneRepMax(){
   document.getElementById("Estimate").innerHTML = "";
-
+  document.getElementById("Estimate").innerHTML += "<br>";
   var wgt = parseInt(document.getElementById("Weight").value, 10);
   var reps = parseInt(document.getElementById("Reps").value, 10);
   var orm = Math.round((wgt * reps * 0.0333) + wgt);
@@ -179,6 +179,7 @@ function oneRepMax(){
   //1 RM = Weight x Reps x 0.0333 + Weight
   //https://www.reddit.com/r/531Discussion/comments/ad7juk/simple_way_to_evaluate_tm_based_off_5_31_and_tm/
   
+
   for (let i = 0; i < 10; ++i){
     repMax = (orm * (100 - 3*i)) / 100;
     document.getElementById("Estimate").innerHTML += (100 - 3*i) + "% of 1RM: " + (i + 1) + " rep(s): <br> <b>" + repMax + " lbs </b> <br><br>";
