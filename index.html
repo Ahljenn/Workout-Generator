@@ -6,21 +6,34 @@
     <script type="text/javascript" src="src/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta charset="UTF-8">
+
+
+
+    <script>
+        // Prevent right click
+        document.addEventListener("contextmenu",function(e){
+            e.preventDefault();
+        },false);
+
+        //Disable shortcut
+        document.addEventListener("keydown", function(e){
+            if(e.keyCode == 123){
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        });
+
+    </script>
+
 </head>
+
+
+
+
+
 <!-- note:
 Add about nav bar and workout images 
 Add I/O for expected workout time
-One rep max calculator
-
-Use object destructuring for index.js
-https://www.youtube.com/watch?v=NIq3qLaHCIs
-
-
-Add press enter to submit
-
-Use React 
-- Buttons to clear all
-- Button to reset all
 -->
 <!-- add -> commit -> push -->
 
@@ -84,7 +97,6 @@ Use React
         <h class="estimation" id="Estimate"></h>
 
     </div>
-
 </p>
 </body>
 </html>
