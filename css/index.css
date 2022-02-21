@@ -48,8 +48,8 @@ hr{
 }
 img {
     /* Prevents image from stretching upon window resize */
-    width: 50%;
-    height: 50%; 
+    width: 30%;
+    height: 30%; 
     object-fit: contain;
 }
 
@@ -60,7 +60,7 @@ div {
 
 .titleDiv { 
     font-size: 30px;
-    font-family: Helvetica;
+    font-family: monospace;
     color:#000000;
 }
 

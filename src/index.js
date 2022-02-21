@@ -97,11 +97,21 @@ const abs = {
 
 const options = [chest, legs, back, abs, shoulder];
 
+function getDate(){
+  var today = new Date();
+  var day = String(today.getDate()).padStart(2, '0');
+  var month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var year = today.getFullYear();
+  today = month + '/' + day + '/' + year;
+  return today;
+}
+
 function showWorkout(workout){
   /**
    * Display workout
    */
   document.getElementById("workouts").innerHTML = "<hr>"; //Needed to reset the field after reclicking
+  document.getElementById("workouts").innerHTML += "<p style='color:brown;'>Workout for: " + getDate() + "</p>";
   for(let wk of workout){
     document.getElementById("workouts").innerHTML += (wk[0] + " - " + '<i>' + wk[1] + '</i>' + '<br><br>');
   }
