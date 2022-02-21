@@ -111,7 +111,7 @@ function showWorkout(workout){
    * Display workout
    */
   document.getElementById("workouts").innerHTML = "<hr>"; //Needed to reset the field after reclicking
-  document.getElementById("workouts").innerHTML += "<p style='color:brown;'>Workout for: " + getDate() + "</p>";
+  document.getElementById("workouts").innerHTML += "<p style='color:white;'>Workout for: " + getDate() + "</p>";
   for(let wk of workout){
     document.getElementById("workouts").innerHTML += (wk[0] + " - " + '<i>' + wk[1] + '</i>' + '<br><br>');
   }
