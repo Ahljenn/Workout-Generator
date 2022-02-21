@@ -49,7 +49,7 @@ Use React
         <button onclick="showWorkout(generate(chest));">PUSH</button>
         <button onclick="showWorkout(generate(back));">PULL</button>
         <button onclick="showWorkout(generate(legs));">LEGS</button>
-        <button style="background-color: rgb(48, 48, 48);" onClick="reset();">RESET</button>
+        <button class="reset" onClick="reset();">RESET</button>
     </div>
 
     <div id="Bro Splits">
@@ -58,7 +58,7 @@ Use React
         <button onclick="showWorkout(generate(back));">BACK</button>
         <button onclick="showWorkout(generate(shoulder));">SHOULDER</button>
         <button onclick="showWorkout(generate(abs));">ABS</button>
-        <button style="background-color: rgb(48, 48, 48);" onClick="reset();">RESET</button>
+        <button class="reset" onClick="reset();">RESET</button>
     </div>
 
     <!-- <div>
@@ -79,8 +79,8 @@ Use React
         
         <input id="Weight" type="number" placeholder="Weight (lbs)" style="width: 100px;" min="1">
         <input id="Reps" type="number" placeholder="Reps" style="width: 50px;" min="1">
-        <button class="calculate" onclick="oneRepMax();">Calculate</button>
-        <button style="background-color: rgb(48, 48, 48); height:20px" onclick="resetField(Estimate);">Reset</button>
+        <button  onclick="oneRepMax();">Calculate</button>
+        <button class="reset" onclick="resetField(Estimate);">Reset</button>
         <h class="estimation" id="Estimate"></h>
 
     </div>

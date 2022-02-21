@@ -1,3 +1,5 @@
+/* #566AE5; discord color? */
+
 .body {
     color: #000000;
     font: 100% system-ui;
@@ -7,6 +9,7 @@
     background-size: cover;
     margin 0 auto;
     height: 610px;
+    background-position: center;
 } 
 
 button{
@@ -18,11 +21,11 @@ button{
     line-height: 20px;
     height: 30px;
     max-height: 30px;
-    background: #566AE5;
+    background: rgb(206, 206, 206);
     font-weight: 700;
     border: 0;
     border-radius: 8px;
-    color: #FFFFFF;
+    color: #161616;
     margin: 3px;
 }
 
@@ -32,9 +35,9 @@ button{
 
 hr{
     /* Line divider */
-    background-color: #566AE5;
+    background-color: rgb(206, 206, 206);
     border: transparent;
-    height: 10px;
+    height: 0px;
 }
 
 .middle{
@@ -42,7 +45,13 @@ hr{
     font-family: 'Lucida Sans';
     font-style: oblique;
     font-size: xx-large;
-    color: #566AE5;
+    color: rgb(206, 206, 206);
+    
+}
+
+.reset {
+    background-color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
 }
 
 .middle2{
@@ -94,11 +103,11 @@ div {
     line-height: 20px;
     height: 20px;
     max-height: 30px;
-    background: #566AE5;
+    background: rgb(206, 206, 206);
     font-weight: 700;
     border: 0;
     border-radius: 8px;
-    color: #FFFFFF;
+    color: #292929;
 }
 
 
