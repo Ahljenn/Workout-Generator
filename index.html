@@ -22,6 +22,13 @@
                 e.preventDefault();
             }
         });
+       
+        window.onclick = function(event){
+        var modal = document.getElementById("max");
+        if (event.target == modal){
+            modal.style.display = "none";
+            }
+        }
 
     </script>
 
@@ -85,12 +92,25 @@ Add I/O for expected workout time
         <br>
         <h>One rep max calculator</h>
         <br>
-        
         <input id="Weight" type="number" placeholder="Weight (lbs)" style="width: 100px;" min="1">
         <input id="Reps" type="number" placeholder="Reps" style="width: 50px;" min="1">
-        <button  onclick="oneRepMax();">CALCULATE</button>
-        <button class="reset" onclick="resetField(Estimate);">RESET</button>
-        <h class="estimation" id="Estimate"></h>
+
+        <!-- <button  onclick="oneRepMax();">CALCULATE</button> -->
+        <button onclick="openModalCalc('max');" id="calcBtn">Calculate</button>
+        <div id="max" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span onclick="closeModal('close', 'max');" class="close">&times;</span>
+                  <h2>One Rep Max Approximation</h2>
+                  <p>Results based on Jim Wendler's 5/3/1 training program</p>
+                </div>
+                <div class="modal-body" id="Estimate">
+                  <p>[Estimations]</p>
+                </div>
+              </div>
+        </div>
+
+
 
     </div>
 </p>

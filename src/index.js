@@ -166,13 +166,13 @@ function generate(day){
   return workouts;
 }
 
-
 function oneRepMax(){
   document.getElementById("Estimate").innerHTML = "";
   document.getElementById("Estimate").innerHTML += "<br>";
   var wgt = parseInt(document.getElementById("Weight").value, 10);
   var reps = parseInt(document.getElementById("Reps").value, 10);
   var orm = Math.round((wgt * reps * 0.0333) + wgt);
+
   if (wgt < 1 || reps < 1 || isNaN(orm)){
     document.getElementById("Estimate").innerHTML += "Invalid input, try again.";
     return false;
@@ -180,12 +180,12 @@ function oneRepMax(){
   //1 RM = Weight x Reps x 0.0333 + Weight
   //https://www.reddit.com/r/531Discussion/comments/ad7juk/simple_way_to_evaluate_tm_based_off_5_31_and_tm/
   
-
   for (let i = 0; i < 10; ++i){
     repMax = (orm * (100 - 3*i)) / 100;
     document.getElementById("Estimate").innerHTML += (100 - 3*i) + "% of 1RM: " + (i + 1) + " rep(s): <br> <b>" + repMax + " lbs </b> <br><br>";
     // document.getElementById("Estimate").innerHTML += "100% of 1RM: 1 rep - <b>" + orm + "lbs </b>";
   }
+  
   return false;
 }
 
@@ -232,4 +232,24 @@ function resetField(){
 function playConnect(){
   var connect = new Audio("../sounds/Connect.wav");
   connect.play();
+}
+
+/*Modal functions*/
+
+var calcBtn = document.getElementById("calcButton");
+var span = document.getElementsByClassName("close")[0];
+
+// calcBtn.addEventListener("click", )
+
+
+function openModalCalc(modalId){
+  oneRepMax();
+  var modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
+
+function closeModal(spanId, modalId){
+  span = document.getElementsByClassName("spanId")[0];
+  var modal = document.getElementById(modalId);
+  modal.style.display = "none";
 }
