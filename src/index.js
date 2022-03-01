@@ -174,7 +174,7 @@ function oneRepMax(){
   var orm = Math.round((wgt * reps * 0.0333) + wgt);
 
   if (wgt < 1 || reps < 1 || isNaN(orm)){
-    document.getElementById("Estimate").innerHTML += "Invalid input, try again.";
+    document.getElementById("Estimate").innerHTML += "Invalid input, try again.<br><br>" ;
     return false;
   }
   //1 RM = Weight x Reps x 0.0333 + Weight
@@ -182,8 +182,11 @@ function oneRepMax(){
   
   for (let i = 0; i < 10; ++i){
     repMax = (orm * (100 - 3*i)) / 100;
-    document.getElementById("Estimate").innerHTML += (100 - 3*i) + "% of 1RM: " + (i + 1) + " rep(s): <br> <b>" + repMax + " lbs </b> <br><br>";
-    // document.getElementById("Estimate").innerHTML += "100% of 1RM: 1 rep - <b>" + orm + "lbs </b>";
+    if (i == 0){
+      document.getElementById("Estimate").innerHTML += "<i>" + (100 - 3*i) + "% of 1RM: " + (i + 1) + " rep(s): <b style='color:brown;'>" + repMax + " lbs </b> </i> <br><br>";
+    } else {
+      document.getElementById("Estimate").innerHTML += (100 - 3*i) + "% of 1RM: " + (i + 1) + " rep(s): <b>" + repMax + " lbs </b> <br><br>";
+    }
   }
   
   return false;
