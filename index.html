@@ -54,7 +54,7 @@ Add I/O for expected workout time
     <hr> 
 
     <div id="Options">
-        <button onClick="selectPPL();">PUSH-PULL-LEGS</button>
+        <button onClick="selectPPL();">PUSH, PULL, LEGS</button>
         <button onClick="selectBro();">BRO SPLITS</button>
         <br>
         <h><i>Select your workout split</i></h>
@@ -97,6 +97,8 @@ Add I/O for expected workout time
 
         <!-- <button  onclick="oneRepMax();">CALCULATE</button> -->
         <button onclick="openModalCalc('max');" id="calcBtn">CALCULATE</button>
+        <button class="reset" onClick="resetField();">RESET</button>
+        
         <div id="max" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
