@@ -242,9 +242,6 @@ function playConnect(){
 var calcBtn = document.getElementById("calcButton");
 var span = document.getElementsByClassName("close")[0];
 
-// calcBtn.addEventListener("click", )
-
-
 function openModalCalc(modalId){
   oneRepMax();
   var modal = document.getElementById(modalId);
