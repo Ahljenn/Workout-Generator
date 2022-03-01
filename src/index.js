@@ -110,6 +110,7 @@ function showWorkout(workout){
   /**
    * Display workout
    */
+  playConnect();
   document.getElementById("workouts").innerHTML = "<hr>"; //Needed to reset the field after reclicking
   document.getElementById("workouts").innerHTML += "<p style='color:white;'>Workout for: " + getDate() + "</p>";
   for(let wk of workout){
@@ -225,4 +226,10 @@ function resetField(){
   document.getElementById("Estimate").innerHTML = '';
   document.getElementById("Weight").value = '';
   document.getElementById("Reps").value = '';
+}
+
+/*Sound functions*/
+function playConnect(){
+  var connect = new Audio("../sounds/Connect.wav");
+  connect.play();
 }

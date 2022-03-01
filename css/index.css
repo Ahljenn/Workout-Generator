@@ -127,6 +127,18 @@ input[type=number]{
     border-radius: 4px;
 }
 
+
+
+
+
+
+.modal {
+    display:none;
+}
+
+
+
+
 @media (max-width: 370px){
     button{
         margin: 12px;
