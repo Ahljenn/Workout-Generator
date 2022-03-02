@@ -29,7 +29,6 @@
             modal.style.display = "none";
             }
         }
-
     </script>
 
 </head>
@@ -53,6 +52,11 @@ Add I/O for expected workout time
     <div id="workouts" class="mainDiv"></div>
     <hr> 
 
+    <!-- Add "workout generated!" message then button to [SHOW] and [RESET] 
+    for show, add modal functionality -->
+
+ 
+
     <div id="Options">
         <button onClick="selectPPL();">PUSH, PULL, LEGS</button>
         <button onClick="selectBro();">BRO SPLITS</button>
@@ -66,6 +70,8 @@ Add I/O for expected workout time
         <button onclick="showWorkout(generate(back));">PULL</button>
         <button onclick="showWorkout(generate(legs));">LEGS</button>
         <button class="reset" onClick="reset();">RESET</button>
+        <br>
+        <button class="show" onclick="openModalWk('workoutModal');" id="workout">SHOW</button>
     </div>
 
     <div id="Bro Splits">
@@ -75,15 +81,27 @@ Add I/O for expected workout time
         <button onclick="showWorkout(generate(shoulder));">SHOULDER</button>
         <button onclick="showWorkout(generate(abs));">ABS</button>
         <button class="reset" onClick="reset();">RESET</button>
+        <br>
+        <button class="show" onclick="openModalWk('workoutModal');" id="workout">SHOW</button>
     </div>
 
-    <!-- <div>
-        <img src="https://i.pinimg.com/originals/5d/1b/62/5d1b6261ab2fcda7a9b01efab0df1e17.png">
-    </div> -->
-   
 
-    <div class="middle">
+    <div id="workoutModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+              <span onclick="closeModal('closeWorkout', 'workoutModal');" class="closeWorkout">&times;</span>
+              <h2>Workout for today</h2>
+              <p></p>
+            </div>
+            <div class="modal-body" id="workoutDisplay">
+              <p>workout</p>
+            </div>
+          </div>
     </div>
+
+    <div class="titleDiv" id="showText">
+    </div>
+
 
     <hr>
     
