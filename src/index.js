@@ -114,8 +114,10 @@ function showWorkout(workout){
   document.getElementById("showText").innerHTML += "Workout generated! Press 'SHOW'";
   document.getElementById("workoutDisplay").innerHTML = "<hr>"; //Needed to reset the field after reclicking
   document.getElementById("workoutDisplay").innerHTML += "<b><p class='modalInner1'>Workout for: " + getDate() + "</p></b>";
+  let i = 1;
   for(let wk of workout){
-    document.getElementById("workoutDisplay").innerHTML += ("<p class='modalInner1'>" + wk[0] + " - " + '<i>' + wk[1] + '</i>' + '<br></p>');
+    document.getElementById("workoutDisplay").innerHTML += "<p class='modalInner1'>" + i + ". " + wk[0] + " - " + "<i>" + wk[1] + "</i>" + "<br></p>";
+    i++;
   }
 }
 
