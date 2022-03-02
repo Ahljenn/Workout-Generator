@@ -110,11 +110,12 @@ function showWorkout(workout){
   /**
    * Display workout
    */
-  playConnect();
-  document.getElementById("workouts").innerHTML = "<hr>"; //Needed to reset the field after reclicking
-  document.getElementById("workouts").innerHTML += "<p style='color:white;'>Workout for: " + getDate() + "</p>";
+  document.getElementById("showText").innerHTML = "";
+  document.getElementById("showText").innerHTML += "Workout generated! Press 'SHOW'";
+  document.getElementById("workoutDisplay").innerHTML = "<hr>"; //Needed to reset the field after reclicking
+  document.getElementById("workoutDisplay").innerHTML += "<b><p class='modalInner1'>Workout for: " + getDate() + "</p></b>";
   for(let wk of workout){
-    document.getElementById("workouts").innerHTML += (wk[0] + " - " + '<i>' + wk[1] + '</i>' + '<br><br>');
+    document.getElementById("workoutDisplay").innerHTML += ("<p class='modalInner1'>" + wk[0] + " - " + '<i>' + wk[1] + '</i>' + '<br></p>');
   }
 }
 
@@ -202,6 +203,7 @@ function reset(){
   var options = document.getElementById("Options");
   options.style.display = "block";
   document.getElementById("workouts").innerHTML = '';
+  document.getElementById("showText").innerHTML = "";
 }
 
 function loadPage(){
@@ -241,6 +243,11 @@ function playConnect(){
 
 var calcBtn = document.getElementById("calcButton");
 var span = document.getElementsByClassName("close")[0];
+
+function openModalWk(modalId){
+  var modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
 
 function openModalCalc(modalId){
   oneRepMax();

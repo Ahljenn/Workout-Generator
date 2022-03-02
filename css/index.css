@@ -109,6 +109,11 @@ div {
     color: #292929;
 }
 
+.show {
+    color:rgb(245, 245, 245);
+    background-color: #770000;
+    text-align: center;
+}
 
 h{
     font-style: bold;
@@ -133,8 +138,6 @@ input[type=number]{
         margin: 12px;
     }
 }
-
-
 
 
 /* The Modal (background) */
@@ -164,7 +167,7 @@ input[type=number]{
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
   }
   
   /* Add Animation */
@@ -200,4 +203,9 @@ input[type=number]{
   }
   
   .modal-body {padding: 2px 16px;}
+
+  .modalInner1{
+      color:rgb(0, 0, 0);
+      font-family:monospace;
+  }
   
